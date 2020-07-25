@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Personal Blog`,
+    title: `A Blog`,
     author: `Volkan`,
-    description: `A starter personal blog`,
+    description: `A personal blog`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `gatsbyjs`,
