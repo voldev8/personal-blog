@@ -17,8 +17,7 @@ function Bio() {
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
               style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
+                margin: `0 ${rhythm(1 / 2)}`,
                 minWidth: 50,
                 borderRadius: `100%`,
               }}
@@ -27,8 +26,7 @@ function Bio() {
               }}
             />
             <p>
-              A personal blog by <strong>{author}</strong>. <br />
-              {/* A human being? */}
+              A personal blog by <strong>{author}</strong>. <br />A human being?
               {/* <a href={`https://twitter.com/${social.twitter}`}>
                 Follow me on Twitter
               </a> */}
@@ -62,6 +60,10 @@ const bioQuery = graphql`
 
 const Container = styled.div`
   display: flex;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+  }
 `
 
 export default Bio
