@@ -10,7 +10,7 @@ import { rhythm } from "../utils/typography"
 class BlogPage extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+    // const siteTitle = data.site.siteMetadata.title
     const posts = data.allMdx.edges
 
     return (

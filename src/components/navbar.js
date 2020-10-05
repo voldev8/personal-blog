@@ -51,11 +51,13 @@ const Nav = styled.div`
     font-size: 2rem;
     align-self: center;
     color: black;
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
+    }
   }
   h1 span {
     bottom: 0;
     right: 0;
-    /* transition: all 0.2s; */
     cursor: default;
   }
   h1 span:hover {

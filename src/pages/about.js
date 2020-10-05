@@ -6,7 +6,11 @@ const About = () => {
   return (
     <Layout title={"About"}>
       <SEO title="About" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <p>About</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+        praesentium in animi fugiat, aliquid corrupti voluptate fugit eaque quia
+        dolorum earum esse est quasi officiis sapiente ipsum sed culpa sint!
+      </p>
     </Layout>
   )
 }

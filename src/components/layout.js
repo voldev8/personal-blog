@@ -1,13 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import Navbar from "./navbar"
+import Footer from "./footer"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { title, children } = this.props
     let header = (
       <h2
         style={{
@@ -34,60 +34,35 @@ class Layout extends React.Component {
           <header>{header}</header>
           <main>{children}</main>
         </div>
-        <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
+        <Footer />
       </Wrapper>
     )
   }
 }
+const slideIn = keyframes`
+    0% {
+      transform: translate3d(-2rem, 0, 0);
+    }
 
+    75% {
+      transform: translate3d(4px, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+`
 const Wrapper = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   header {
     opacity: 0;
-    animation: fadeUp ease 1s forwards;
-    -webkit-animation: fadeUp ease 1s forwards;
+    animation: ${slideIn} ease 1s forwards;
+    -webkit-animation: ${slideIn} ease 1s forwards;
   }
-  /* fade-up Animation */
-
-  @keyframes fadeUp {
-    0% {
-      transform: translate3d(-2rem, 0, 0);
-    }
-
-    75% {
-      transform: translate3d(4px, 0, 0);
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes fadeUp {
-    0% {
-      transform: translate3d(-2rem, 0, 0);
-    }
-
-    75% {
-      transform: translate3d(4px, 0, 0);
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-  }
-`
-
-const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
 `
 
 export default Layout

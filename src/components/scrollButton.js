@@ -16,7 +16,10 @@ const ScrollButton = () => {
   }
   useEffect(() => {
     window.addEventListener("scroll", checkScrollTop)
-  }, [])
+    return () => {
+      window.removeEventListener("scroll", checkScrollTop)
+    }
+  }, [showScroll])
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
