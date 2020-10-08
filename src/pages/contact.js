@@ -16,10 +16,11 @@ const Contact = () => {
         style={{
           position: `absolute`,
           top: `5rem`,
-          left: `1rem`,
+          left: `0`,
+          padding: `0 0.5rem 7rem 0.5rem`,
           zIndex: `-1`,
         }}
-        height="80vh"
+        height="90vh"
         width="98vw"
         params={{
           particles: {

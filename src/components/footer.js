@@ -98,6 +98,7 @@ const StyledLink = styled(Link)`
 const Build = styled.div`
   color: #000;
   @media (max-width: 600px) {
+    padding-right: 0.5rem;
     font-size: 0.6rem;
   }
   @media (max-width: 400px) {

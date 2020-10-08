@@ -1,32 +1,70 @@
-import React from "react"
+import React, { useState } from "react"
+import Menubar from "./menubar"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Navbar = () => {
+  const [menubar, setMenubar] = useState(false)
+  const handleClick = () => {
+    setMenubar(!menubar)
+  }
   return (
-    <Nav as="nav">
-      <h1>
-        <span>V</span>
-        <span>o</span>
-        <span>l</span>
-        <span>k</span>
-        <span>a</span>
-        <span>n</span>
-        <span> </span>
-        <span>U</span>
-        <span>y</span>
-        <span>a</span>
-        <span>r</span>
-        <span>e</span>
-        <span>r</span>
-      </h1>
-      <ul>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/about">About</StyledLink>
-        <StyledLink to="/blog">Blog</StyledLink>
-        <StyledLink to="/contact">Contact</StyledLink>
-      </ul>
-    </Nav>
+    <>
+      <Nav as="nav">
+        <h1>
+          <span>V</span>
+          <span>o</span>
+          <span>l</span>
+          <span>k</span>
+          <span>a</span>
+          <span>n</span>
+          <span> </span>
+          <span>U</span>
+          <span>y</span>
+          <span>a</span>
+          <span>r</span>
+          <span>e</span>
+          <span>r</span>
+        </h1>
+        <ul>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/about">About</StyledLink>
+          <StyledLink to="/blog">Blog</StyledLink>
+          <StyledLink to="/contact">Contact</StyledLink>
+        </ul>
+        <BurgerMenu onClick={handleClick}>
+          {!menubar ? (
+            <svg viewBox="0 0 100 60" width="40" height="40" fill="#744c9e">
+              <rect width="100" height="15" rx="6"></rect>
+              <rect y="25" width="100" height="15" rx="6"></rect>
+              <rect y="50" width="100" height="15" rx="6"></rect>
+            </svg>
+          ) : (
+            <svg viewBox="0 0 100 60" width="40" height="40" fill="#744c9e">
+              <line
+                x1="20"
+                y1="60"
+                x2="80"
+                y2="10"
+                stroke="#2f3676"
+                strokeWidth="15"
+                strokeLinecap="round"
+              />
+              <line
+                x1="20"
+                y1="10"
+                x2="80"
+                y2="60"
+                stroke="#2f3676"
+                strokeWidth="15"
+                strokeLinecap="round"
+              />
+            </svg>
+          )}
+        </BurgerMenu>
+      </Nav>
+      {menubar && <Menubar />}
+    </>
   )
 }
 
@@ -73,6 +111,17 @@ const Nav = styled.div`
     flex-direction: row;
     align-items: center;
     margin-bottom: 0;
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+`
+const BurgerMenu = styled.div`
+  align-self: center;
+  margin-right: 1rem;
+  display: none;
+  @media (max-width: 600px) {
+    display: flex;
   }
 `
 
