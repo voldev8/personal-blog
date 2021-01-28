@@ -10,23 +10,23 @@ const Footer = () => {
           to="https://www.linkedin.com/in/volkan-uyarer-8789851b8/"
           target="_blank"
         >
-          <img src="./linkedin.png" alt="linkedin" />
+          <img src="../../linkedin.png" alt="linkedin" />
         </StyledLink>
         <StyledLink to="https://github.com/voldev8" target="_blank">
-          <img src="./github.png" alt="github" />
+          <img src="../../github.png" alt="github" />
         </StyledLink>
         <StyledLink to="https://www.hackerrank.com/Voldev" target="_blank">
-          <img src="./hackerrank.png" alt="hackerrank" />
+          <img src="../../hackerrank.png" alt="hackerrank" />
         </StyledLink>
         <StyledLink
           to="https://www.codecademy.com/profiles/voldev"
           target="_blank"
           style={{ border: `1px solid navy` }}
         >
-          <img src="./codec.png" alt="codecademy" />
+          <img src="../../codec.png" alt="codecademy" />
         </StyledLink>
         <StyledLink to="https://www.freecodecamp.org/voldev" target="_blank">
-          <img style={{ padding: `6px` }} src="./fcc.png" alt="freecodecamp" />
+          <img style={{ padding: `6px` }} src="../../fcc.png" alt="freecodecamp" />
         </StyledLink>
       </ul>
       <Build>

@@ -52,7 +52,7 @@ const Contact = () => {
           <input type="email" name="email" required />
           <label htmlFor="message">Message:</label>
           <textarea name="message" cols="40" rows="30" required />
-          <Button type="submit" width={`50%`}>
+          <Button type="submit" width={`50%`} height={`2rem`}>
             Send
           </Button>
         </Form>

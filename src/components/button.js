@@ -25,12 +25,13 @@ const ButtonWrapper = styled.button`
   margin-bottom: ${props => props.props.marginBottom};
   width: ${props => props.props.width};
 
+
   &:hover {
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
   }
 
   @media (max-width: 600px) {
-    height: 1rem;
+    height: ${props => props.props.height};
   }
 `
 

@@ -58,6 +58,11 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
           <li>
+            <Link to={`/blog`} rel="main">
+              Main
+            </Link>
+          </li>
+          <li>
             {next && (
               <Link to={`/blog${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
