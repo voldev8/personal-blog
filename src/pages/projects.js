@@ -154,6 +154,7 @@ const AppLink = styled(Link)`
   img {
     transition: all 0.6s 0.2s;
     width: 100%;
+    height: auto;
   }
   span {
     position: absolute;
