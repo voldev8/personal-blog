@@ -1,5 +1,5 @@
 ---
-title: Cheat-> Python
+title: Cheat-> Python - 1
 date: "2015-05-06"
 description: "Basics"
 ---
