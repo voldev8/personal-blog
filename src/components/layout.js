@@ -1,9 +1,11 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
-import { rhythm } from "../utils/typography"
 import Navbar from "./navbar"
 import Footer from "./footer"
+
+deckDeckGoHighlightElement()
 
 class Layout extends React.Component {
   render() {
@@ -11,7 +13,7 @@ class Layout extends React.Component {
     let header = (
       <h2
         style={{
-          marginBottom: rhythm(1.5),
+          marginBottom: `1.5rem`,
           marginTop: 0,
           color: `#744c9e`,
           textShadow: `1px 1px 4px rgba(0,0,0,0.3)`,
@@ -27,8 +29,8 @@ class Layout extends React.Component {
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            maxWidth: `24rem`,
+            padding: `1.5rem`,
           }}
         >
           <header>{header}</header>

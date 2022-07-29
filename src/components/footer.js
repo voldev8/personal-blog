@@ -26,7 +26,11 @@ const Footer = () => {
           <img src="../../codec.png" alt="codecademy" />
         </StyledLink>
         <StyledLink to="https://www.freecodecamp.org/voldev" target="_blank">
-          <img style={{ padding: `6px` }} src="../../fcc.png" alt="freecodecamp" />
+          <img
+            style={{ padding: `6px` }}
+            src="../../fcc.png"
+            alt="freecodecamp"
+          />
         </StyledLink>
       </ul>
       <Build>

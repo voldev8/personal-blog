@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import styled from "styled-components"
-import Particles from "react-particles-js"
+import Particle from "../components/Particle"
 
 const Contact = () => {
   return (
@@ -12,35 +12,8 @@ const Contact = () => {
         title="Contact"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-      <Particles
-        style={{
-          position: `absolute`,
-          top: `5rem`,
-          left: `0`,
-          padding: `0 0.5rem 7rem 0.5rem`,
-          zIndex: `-1`,
-        }}
-        height="90vh"
-        width="98vw"
-        params={{
-          particles: {
-            color: {
-              value: "#2f3676",
-            },
-            line_linked: {
-              color: {
-                value: "#2f3676",
-              },
-            },
-            number: {
-              value: 90,
-            },
-            size: {
-              value: 4,
-            },
-          },
-        }}
-      />
+
+      <Particle />
       <ContactContainer>
         <Form
           action="https://getform.io/f/57036a36-2e5b-4bda-a1d4-f6e7ae0fd48d"
