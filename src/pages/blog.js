@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
+import styled from "styled-components"
 
 const BlogPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -25,7 +26,10 @@ const BlogPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={"A blog"}>
-      <SEO title="Blog" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="Blog"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`, `python`]}
+      />
       <Bio />
       <div style={{ margin: "20px 0 40px" }}>
         {posts.map(post => {
@@ -33,20 +37,17 @@ const BlogPage = ({ data, location }) => {
 
           return (
             <div key={post.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: `1rem`,
-                }}
-              >
+              <BlogHeader>
                 <Link
                   style={{ boxShadow: `none` }}
                   to={`/blog${post.fields.slug}`}
                 >
                   {title}
                 </Link>
-              </h3>
+              </BlogHeader>
               {/* <small>{post.frontmatter.date}</small> */}
               <p
+                style={{ paddingLeft: `1rem` }}
                 dangerouslySetInnerHTML={{
                   __html: post.frontmatter.description || post.excerpt,
                 }}
@@ -55,12 +56,29 @@ const BlogPage = ({ data, location }) => {
           )
         })}
       </div>
-      <Link to="/">
-        <Button marginTop="35px">Go Home</Button>
-      </Link>
+      <div
+        style={{ display: `flex`, justifyContent: `center`, padding: `2rem 0` }}
+      >
+        <Link to="/">
+          <Button>Go Home</Button>
+        </Link>
+      </div>
     </Layout>
   )
 }
+
+const BlogHeader = styled.h3`
+  border-bottom: 1px solid #e64d3f;
+  padding: 0 0.5rem;
+  color: #005b99;
+  width: max-content;
+  transition: 0.6s;
+  &:hover {
+    opacity: 0.8;
+    color: #e64d3f;
+    border-bottom: 1px solid #005b99;
+  }
+`
 
 export default BlogPage
 

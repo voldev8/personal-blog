@@ -149,6 +149,7 @@ s
 # {1,2} (sets only have unique elements)
 
 ```
+
 ### booleans
 
 ```python
@@ -159,6 +160,5 @@ a
 # False
 b = None
 print(b)
-# None 
+# None
 ```
-

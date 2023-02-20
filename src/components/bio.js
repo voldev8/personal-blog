@@ -3,8 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-// import { rhythm } from "../utils/typography"
-
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -14,9 +12,6 @@ const Bio = () => {
             name
             summary
           }
-          social {
-            twitter
-          }
         }
       }
     }
@@ -24,13 +19,11 @@ const Bio = () => {
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
-  // const social = data.site.siteMetadata?.social
 
   return (
     <Container>
       <BioImage>
         <StaticImage
-          className="bio-avatar"
           layout="fixed"
           formats={["auto", "webp", "avif"]}
           src="../images/profile-pic.png"
@@ -58,6 +51,7 @@ const Container = styled.div`
   }
 `
 const BioImage = styled.image`
+  margin: 0.5rem;
   border-radius: 50%;
   overflow: hidden;
 `

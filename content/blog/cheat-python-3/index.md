@@ -1,6 +1,6 @@
 ---
 title: Cheat-> Python - 3
-date: "2015-05-06"
+date: "2015-05-08"
 description: "Methods and Functions"
 ---
 
@@ -32,7 +32,7 @@ lst.count(2)
 ```python
 def is_prime(num):
     '''
-    Naive method of checking for primes. 
+    Naive method of checking for primes.
     '''
     for n in range(2,num):
         if num % n == 0:
@@ -78,7 +78,7 @@ def myfunc(**kwargs):
         print(f"May I have some {kwargs['juice']} juice?")
     else:
         pass
-        
+
 myfunc(juice='orange')
 # May I have some orange juice?
 ```

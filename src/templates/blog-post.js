@@ -5,6 +5,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ScrollButton from "../components/scrollButton"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+
+deckDeckGoHighlightElement()
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -25,6 +28,7 @@ const BlogPostTemplate = ({
         dangerouslySetInnerHTML={{ __html: post.html }}
         itemProp="articleBody"
       />
+
       <hr
         style={{
           marginBottom: `1rem`,

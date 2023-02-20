@@ -120,6 +120,7 @@ const BurgerMenu = styled.div`
   align-self: center;
   margin-right: 1rem;
   display: none;
+  transition: all 1s;
   @media (max-width: 600px) {
     display: flex;
   }

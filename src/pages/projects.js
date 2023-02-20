@@ -62,7 +62,7 @@ const Projects = () => {
             password link on login page. And they will receive an email with a
             reset-password link.
           </p>
-          <h4>Languages used</h4>
+          <h4>Tools used</h4>
           <p>
             <ul style={{ paddingLeft: `1rem` }}>
               <li>React</li>
@@ -86,7 +86,7 @@ const Projects = () => {
           </a>
         </Heading>
         <AppLink
-          to="https://csgotube.herokuapp.com/"
+          to="https://cstube.herokuapp.com/"
           target="_blank"
           rel="noreferrer"
         >
@@ -100,15 +100,16 @@ const Projects = () => {
         <AppInfo>
           <h4>About</h4>
           <p>
-            With Cs:go_tube web app users can share utility usage for each map using 
-            youtube videos and giving the specific second of the video. The idea is to simplify
-            watching the nade videos with a faster access using either the search option on 
-            the web app or selecting the map of your choice and seeing your options.
+            With Cs:go_tube web app users can share utility usage for each map
+            using youtube videos and giving the specific second of the video.
+            The idea is to simplify watching the nade videos with a faster
+            access using either the search option on the web app or selecting
+            the map of your choice and seeing your options.
             <br />
-            You can also see top 5 Counter-Strike livestreams  on Twitch and watch the top one 
-            directly on the web app. 
+            You can also see top 5 Counter-Strike livestreams on Twitch and
+            watch the top one directly on the web app.
           </p>
-          <h4>Languages used</h4>
+          <h4>Tools used</h4>
           <p>
             <ul style={{ paddingLeft: `1rem` }}>
               <li>Django</li>
@@ -118,7 +119,41 @@ const Projects = () => {
             </ul>
           </p>
         </AppInfo>
-        <hr style={{ margin: `1rem 0` }} />
+      </ProjectFrame>
+      <ProjectFrame>
+        <Heading>
+          <h3>Noor Grill</h3>
+          <a
+            href="https://github.com/voldev8/noor_react"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="./github.png" alt="github" />
+          </a>
+        </Heading>
+        <AppLink
+          to="https://www.noorgrill.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            style={{ margin: 0 }}
+            src="./noorgrill_screenshot.png"
+            alt="Noor Grill Webpage"
+          />
+          <span>View App</span>
+        </AppLink>
+        <AppInfo>
+          <h4>About</h4>
+          <p>A Restaurant webpage from scratch</p>
+          <h4>Tools used</h4>
+          <p>
+            <ul style={{ paddingLeft: `1rem` }}>
+              <li>React</li>
+              <li>EmailJS</li>
+            </ul>
+          </p>
+        </AppInfo>
       </ProjectFrame>
     </Layout>
   )

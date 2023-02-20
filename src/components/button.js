@@ -6,7 +6,6 @@ const Button = props => (
 )
 
 const ButtonWrapper = styled.button`
-  display: block;
   border: none;
   text-align: center;
   box-sizing: border-box;
@@ -20,11 +19,10 @@ const ButtonWrapper = styled.button`
   color: ${props => props.props.color || "rgb(255, 255, 255)"};
   font-size: ${props => props.props.fontSize || "15px"};
   font-weight: ${props => props.props.fontWeight || "600"};
-  border-radius: ${props => props.props.radius || "6px"};
+  align-self: ${props => props.props.alignSelf || "center"};
   margin-top: ${props => props.props.marginTop};
   margin-bottom: ${props => props.props.marginBottom};
   width: ${props => props.props.width};
-
 
   &:hover {
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);

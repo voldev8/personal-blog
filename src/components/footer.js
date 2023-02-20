@@ -48,10 +48,9 @@ const FooterDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100wv;
-  height: 7rem;
+  height: 8rem;
   border-top: 1px solid #2f3676;
   color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgba(47, 54, 118, 0.5);
   padding: 2rem;
   @media (max-width: 600px) {
     padding: 0.5rem;

@@ -1,46 +1,42 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
 import Navbar from "./navbar"
 import Footer from "./footer"
 
-deckDeckGoHighlightElement()
-
-class Layout extends React.Component {
-  render() {
-    const { title, children } = this.props
-    let header = (
-      <h2
+const Layout = props => {
+  const { title, children } = props
+  let header = (
+    <h2
+      style={{
+        marginBottom: `1.5rem`,
+        marginTop: 0,
+        color: `#744c9e`,
+        textShadow: `1px 1px 4px rgba(0,0,0,0.3)`,
+      }}
+    >
+      {title}
+    </h2>
+  )
+  return (
+    <Wrapper>
+      <Navbar />
+      <div
         style={{
-          marginBottom: `1.5rem`,
-          marginTop: 0,
-          color: `#744c9e`,
-          textShadow: `1px 1px 4px rgba(0,0,0,0.3)`,
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: `44rem`,
+          padding: `1.5rem`,
         }}
       >
-        {title}
-      </h2>
-    )
-    return (
-      <Wrapper>
-        <Navbar />
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: `24rem`,
-            padding: `1.5rem`,
-          }}
-        >
-          <header>{header}</header>
-          <main>{children}</main>
-        </div>
-        <Footer />
-      </Wrapper>
-    )
-  }
+        <header>{header}</header>
+        <main>{children}</main>
+      </div>
+      <Footer />
+    </Wrapper>
+  )
 }
+
 const slideIn = keyframes`
     0% {
       transform: translate3d(-2rem, 0, 0);

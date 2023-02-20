@@ -26,7 +26,7 @@ const Particle = () => {
           position: `absolute`,
           top: `5rem`,
           left: `0`,
-          padding: `0 0.5rem 7rem 0.5rem`,
+          padding: `0.5rem 0.5rem 8rem 0.5rem`,
         },
         fullScreen: {
           zIndex: -2,

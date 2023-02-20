@@ -1,22 +1,37 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
 
 const About = () => {
   return (
     <Layout title={"About"}>
-      <SEO title="About me" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <p style={{ fontFamily: 'Ubuntu' }}>
-        Hi! I'm Volkan. I started coding in 2015 by printing out the words 'Hello World!'. I got hooked so I began my journey with HTML, CSS and from there, moved to JavaScript.
-        And I have not stopped ever since. I continue learning new technologies, languages and really enjoy creating exciting and hopefully useful things with that knowledge.
-        <br />
-        <br />
-        I live in Somerville, MA in the U.S. When I am not coding, I am probably
-        laughing with my wife, hiking a mountain with a cool view, playing video games with my friends,
-        or just biking around.
-      </p>
+      <SEO
+        title="About me"
+        keywords={[`blog`, `about`, `javascript`, `react`]}
+      />
+      <AboutPar>
+        Hi there! Thank you for stopping by. This is Volkan, I am a self-taught
+        web developer. My journey began when I printed out the words 'Hello
+        World!'. This sparked my never-ending curiosity, so I began learning
+        HTML, CSS and from there, moved to JavaScript. And I have not stopped
+        ever since. I continue learning new technologies, languages and I really
+        enjoy creating exciting and hopefully useful applications with that
+        knowledge. I am really looking forward to apply all this knowledge and
+        dedication to a professional setting.
+      </AboutPar>
+      <AboutPar>
+        I live in the U.S., in Somerville, Massachusetts. When I am not coding,
+        I am probably laughing with my wife, hiking mountains with beautiful
+        views, playing video games with friends, or mountain biking.
+      </AboutPar>
     </Layout>
   )
 }
+
+const AboutPar = styled.p`
+  fontfamily: Ubuntu;
+  text-indent: 2rem;
+`
 
 export default About

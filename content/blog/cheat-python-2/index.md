@@ -1,6 +1,6 @@
 ---
 title: Cheat-> Python - 2
-date: "2015-05-06"
+date: "2015-05-07"
 description: "Statements"
 ---
 

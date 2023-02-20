@@ -1,6 +1,6 @@
 ---
 title: Cheat-> Python - 4
-date: "2015-05-07"
+date: "2015-05-09"
 description: "Object Oriented Programming"
 ---
 
@@ -36,7 +36,7 @@ class Circle:
 
     # Circle gets instantiated with a radius (default is 1)
     def __init__(self, radius=1):
-        self.radius = radius 
+        self.radius = radius
         self.area = radius * radius * Circle.pi
 
     # Method for resetting Radius
@@ -107,14 +107,14 @@ class Dog:
 
     def speak(self):
         return self.name+' says Woof!'
-    
+
 class Cat:
     def __init__(self, name):
         self.name = name
 
     def speak(self):
-        return self.name+' says Meow!' 
-    
+        return self.name+' says Meow!'
+
 niko = Dog('Niko')
 felix = Cat('Felix')
 

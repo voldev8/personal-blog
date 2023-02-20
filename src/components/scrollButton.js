@@ -26,11 +26,13 @@ const ScrollButton = () => {
   }
 
   return (
-    <ScrollTopWrapper>
+    <>
       {showScroll && (
-        <FontAwesomeIcon icon={faArrowAltCircleUp} onClick={scrollTop} />
+        <ScrollTopWrapper>
+          <FontAwesomeIcon icon={faArrowAltCircleUp} onClick={scrollTop} />
+        </ScrollTopWrapper>
       )}
-    </ScrollTopWrapper>
+    </>
   )
 }
 const ScrollTopWrapper = styled.i`
@@ -41,8 +43,20 @@ const ScrollTopWrapper = styled.i`
   right: 2rem;
   z-index: 10;
   cursor: pointer;
-  font-size: 3rem;
-  color: #744c9e;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 50%;
+  background-color: #744c9e;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  &:hover {
+    opacity: 0.9;
+  }
 `
 
 export default ScrollButton

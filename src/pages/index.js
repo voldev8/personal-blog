@@ -5,55 +5,52 @@ import styled, { keyframes } from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-class IndexPage extends React.Component {
-  render() {
-    // const siteTitle = "Gatsby Starter Personal Website"
-
-    return (
-      <Layout location={this.props.location}>
-        <SEO
-          title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        {/* <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" /> */}
-        <h1 style={{ lineHeight: `1.4` }}>
-          Hey{" "}
-          <WaveHand role="img" aria-label="wave emoji">
-            👋
-          </WaveHand>
-          ,
-          <Name>
-            <br />I am
-            <span
-              style={{
-                color: `#744c9e`,
-                textShadow: `1px 1px 4px rgba(0,0,0,0.3)`,
-              }}
-            >
-              {" "}
-              Volkan
-            </span>
-            .
-          </Name>
-          <br />
-          <Info>I am a full-stack web developer.</Info>
-        </h1>
-        <div
-          style={{
-            paddingTop: `3rem`,
-            width: `100%`,
-            display: `flex`,
-            alignItems: `center`,
-            justifyContent: `center`,
-          }}
-        >
-          <ProjectsLink to="/projects">
-            <span>My projects</span>
-          </ProjectsLink>
-        </div>
-      </Layout>
-    )
-  }
+const IndexPage = props => {
+  return (
+    <Layout location={props.location}>
+      <SEO
+        title="Home"
+        keywords={[`blog`, `developer`, `javascript`, `react`, `python`]}
+      />
+      <Header>
+        Hey{" "}
+        <WaveHand role="img" aria-label="wave emoji">
+          👋
+        </WaveHand>
+        ,
+        <Name>
+          <br />I am
+          <span
+            style={{
+              color: `#744c9e`,
+              textShadow: `1px 1px 4px rgba(0,0,0,0.3)`,
+            }}
+          >
+            {" "}
+            Volkan
+          </span>
+          .
+        </Name>
+        <br />
+        <Info>
+          I am a full-stack <br /> web developer.
+        </Info>
+      </Header>
+      <div
+        style={{
+          paddingTop: `3rem`,
+          width: `100%`,
+          display: `flex`,
+          alignItems: `center`,
+          justifyContent: `center`,
+        }}
+      >
+        <ProjectsLink to="/projects">
+          <span>My projects</span>
+        </ProjectsLink>
+      </div>
+    </Layout>
+  )
 }
 
 const wave = keyframes`
@@ -83,6 +80,11 @@ const slideUp = keyframes`
       opacity: 1;
     }
 `
+const Header = styled.h1`
+  line-height: 1.4;
+  width: max-content;
+`
+
 const WaveHand = styled.span`
   animation-name: ${wave};
   animation-duration: 2.5s;
