@@ -32,7 +32,7 @@ const Projects = () => {
           </a>
         </Heading>
         <AppLink
-          to="https://flavorites-voldev.herokuapp.com/"
+          to="https://flavorites.herokuapp.com/"
           target="_blank"
           rel="noreferrer"
         >
@@ -46,21 +46,23 @@ const Projects = () => {
         <AppInfo>
           <h4>About</h4>
           <p>
-            The Flavorites App gives users the option to browse a recipe catalog
-            consisting of recipes created and shared by other fellow users.
-            Recipes can be searched by name or tags. Each recipe card has two
-            sides. On the front we have a picture, name, ingredients, and tags
-            of the recipe. Single click will flip the card and show step-by-step
-            instructions. Users also have the option to share a source link for
-            additional information and instructions.
+            The Flavorites App allows users to browse a catalog of recipes
+            created and shared by fellow users. Recipes can be searched by name
+            or tags. Each recipe card is an interactive flip card. The front
+            side of the card displays a picture, recipe title, ingredients, and
+            tags. A single-click flips the card and shows step-by-step
+            instructions.
             <br />
-            When signed in, users can create their own f(l)avorites list. They
-            can add new recipes to the database; these recipes can be edited or
-            removed only by the user who created them.
+            Users also have the option to add a source link for additional
+            information. When signed in, users can create their own Flavorites
+            catalog. They can add their recipes to the database; these recipes
+            can be edited or removed only by the user who created them. The name
+            Flavorites is a play with the words "flavor" and "favorite".
             <br />
-            Resetting password is quite easy, users can click the forgot
-            password link on login page. And they will receive an email with a
-            reset-password link.
+            We have all been there, forgetting a password can be frustrating,
+            but in the Flavorites app resetting your password is quick and
+            simple. Just click the "forgot password" link on the login page, and
+            you will receive an email with a reset-password link, et voila!
           </p>
           <h4>Tools used</h4>
           <p>
@@ -100,14 +102,13 @@ const Projects = () => {
         <AppInfo>
           <h4>About</h4>
           <p>
-            With Cs:go_tube web app users can share utility usage for each map
-            using youtube videos and giving the specific second of the video.
-            The idea is to simplify watching the nade videos with a faster
-            access using either the search option on the web app or selecting
-            the map of your choice and seeing your options.
+            The idea for this app was to consolidate CS:GO nade videos into a
+            database. In this database videos are sorted by map, part of the map
+            and the type of the utility. It gives user a shortcut to the
+            specific timestamp on the video. Users can search videos and save
+            them into their favorite list.
             <br />
-            You can also see top 5 Counter-Strike livestreams on Twitch and
-            watch the top one directly on the web app.
+            The web app also features the top 5 Twitch CS:GO live streams
           </p>
           <h4>Tools used</h4>
           <p>
@@ -145,7 +146,9 @@ const Projects = () => {
         </AppLink>
         <AppInfo>
           <h4>About</h4>
-          <p>A Restaurant webpage from scratch</p>
+          <p>
+            Restaurant webpage developed according to client's specifications
+          </p>
           <h4>Tools used</h4>
           <p>
             <ul style={{ paddingLeft: `1rem` }}>

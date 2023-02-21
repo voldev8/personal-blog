@@ -21,9 +21,9 @@ const About = () => {
         dedication to a professional setting.
       </AboutPar>
       <AboutPar>
-        I live in the U.S., in Somerville, Massachusetts. When I am not coding,
-        I am probably laughing with my wife, hiking mountains with beautiful
-        views, playing video games with friends, or mountain biking.
+        I live in Somerville, Massachusetts. When I am not coding, I am probably
+        laughing with my wife, hiking mountains with beautiful views, playing
+        video games with friends, or mountain biking.
       </AboutPar>
     </Layout>
   )
