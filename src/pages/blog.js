@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Button from "../components/button"
 import styled from "styled-components"
 
@@ -26,7 +26,7 @@ const BlogPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={"A blog"}>
-      <SEO
+      <Seo
         title="Blog"
         keywords={[`blog`, `gatsby`, `javascript`, `react`, `python`]}
       />

@@ -1,0 +1,64 @@
+[
+  {
+    "title": "Docker Setup",
+    "completed": true,
+    "tasks": [
+      "Set up Docker Compose for managing containers (backend, frontend, PostgreSQL)",
+      "Set up the database and migrations."
+    ]
+  },
+  {
+    "title": "Backend Development",
+    "completed": false,
+    "tasks": [
+      "Create Django project and app for the backend.",
+      "Design models for \"Users,\" \"Jobs,\" and others using Django ORM.",
+      "Implement API views and serializers with Django REST framework",
+      "Add JWT authentication for secure API calls."
+    ]
+  },
+  {
+    "title": " Database Setup",
+    "completed": false,
+    "tasks": [
+      "Use supabase for database",
+      "Configure Django to use PostgreSQL container for the database.",
+      "Run database migrations in PostgreSQL."
+    ]
+  },
+  {
+    "title": "Frontend Development",
+    "completed": false,
+    "tasks": [
+      "Create Next.js project with TypeScript using vite",
+      "Install and configure Tailwind CSS in the Next.js project.",
+      "Set up routing and navigation with Next.js.",
+      "Design and create components for user profiles, job listings, etc. using React and TypeScript.",
+      "Implement user login, registration, and authentication forms using fetch.",
+      "Optionally, use Redux or React Context for state management."
+    ]
+  },
+  {
+    "title": "Deployment",
+    "completed": false,
+    "tasks": [
+      "Prepare production build for backend, Next.js frontend",
+      "Deploy Dockerized application to hosting environment (Heroku)"
+    ]
+  },
+  {
+    "title": "Documentation",
+    "completed": false,
+    "tasks": [
+      "Create documentation with setup instructions, usage guidelines, and API docs."
+    ]
+  },
+  {
+    "title": "Optimization and Performance",
+    "completed": false,
+    "tasks": [
+      "Optimize the application for performance and load times.",
+      "Use code splitting and lazy loading for better user experience."
+    ]
+  }
+]

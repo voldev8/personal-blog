@@ -1,163 +1,57 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
+import projects from "../utils/projects.json"
 
 const Projects = () => {
   return (
     <Layout title={"Projects"}>
-      <SEO
+      <Seo
         title="Projects"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-      <ProjectFrame>
-        <Heading>
-          <h3>Flavorites App</h3>
-          <a
-            href="https://github.com/voldev8/recipes-api"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="./github.png" alt="github" />
-            <ToolTip>Backend</ToolTip>
-          </a>
-          <a
-            href="https://github.com/voldev8/recipes-client"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="./github.png" alt="github" />
-            <ToolTip>Frontend</ToolTip>
-          </a>
-        </Heading>
-        <AppLink
-          to="https://flavorites.herokuapp.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            style={{ margin: 0 }}
-            src="./flavorites_screenshot.png"
-            alt="Flavorites App"
-          />
-          <span>View App</span>
-        </AppLink>
-        <AppInfo>
-          <h4>About</h4>
-          <p>
-            The Flavorites App allows users to browse a catalog of recipes
-            created and shared by fellow users. Recipes can be searched by name
-            or tags. Each recipe card is an interactive flip card. The front
-            side of the card displays a picture, recipe title, ingredients, and
-            tags. A single-click flips the card and shows step-by-step
-            instructions.
-            <br />
-            Users also have the option to add a source link for additional
-            information. When signed in, users can create their own Flavorites
-            catalog. They can add their recipes to the database; these recipes
-            can be edited or removed only by the user who created them. The name
-            Flavorites is a play with the words "flavor" and "favorite".
-            <br />
-            We have all been there, forgetting a password can be frustrating,
-            but in the Flavorites app resetting your password is quick and
-            simple. Just click the "forgot password" link on the login page, and
-            you will receive an email with a reset-password link, et voila!
-          </p>
-          <h4>Tools used</h4>
-          <p>
-            <ul style={{ paddingLeft: `1rem` }}>
-              <li>React</li>
-              <li>MongoDB</li>
-              <li>Express.js</li>
-              <li>Node.js</li>
+      {projects.map((project, i) => (
+        <ProjectFrame key={i}>
+          <Heading>
+            <h3>{project.title}</h3>
+            {project.github_link.map((link, i) => (
+              <a href={link[0]} target="_blank" rel="noreferrer" key={i}>
+                <img src="./github.png" alt="github" />
+                <ToolTip>{link[1] ? link[1] : "Github Link"}</ToolTip>
+              </a>
+            ))}
+          </Heading>
+          <AppLink href={project.app_link} target="_blank" rel="noreferrer">
+            <img
+              style={{ margin: 0 }}
+              src={project.app_img}
+              alt={project.app_img_alt}
+            />
+            <span>View App</span>
+          </AppLink>
+          <AppInfo>
+            <h4>About</h4>
+            <p>
+              {project.app_description.map((para, i) => (
+                <>
+                  {para}
+                  <br />
+                </>
+              ))}
+            </p>
+            <h4>Tools used</h4>
+            <ul>
+              {project.tools.map((tool, i) => (
+                <li key={i} style={{ marginLeft: `1rem` }}>
+                  {tool}
+                </li>
+              ))}
             </ul>
-          </p>
-        </AppInfo>
-        <hr style={{ margin: `1rem 0` }} />
-      </ProjectFrame>
-      <ProjectFrame>
-        <Heading>
-          <h3>CS:GO tube App</h3>
-          <a
-            href="https://github.com/voldev8/cstube"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="./github.png" alt="github" />
-          </a>
-        </Heading>
-        <AppLink
-          to="https://cstube.herokuapp.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            style={{ margin: 0 }}
-            src="./csgotube_screenshot.png"
-            alt="CS:GO_tube App"
-          />
-          <span>View App</span>
-        </AppLink>
-        <AppInfo>
-          <h4>About</h4>
-          <p>
-            The idea for this app was to consolidate CS:GO nade videos into a
-            database. In this database videos are sorted by map, part of the map
-            and the type of the utility. It gives user a shortcut to the
-            specific timestamp on the video. Users can search videos and save
-            them into their favorite list.
-            <br />
-            The web app also features the top 5 Twitch CS:GO live streams
-          </p>
-          <h4>Tools used</h4>
-          <p>
-            <ul style={{ paddingLeft: `1rem` }}>
-              <li>Django</li>
-              <li>Django Template</li>
-              <li>PostgreSQL</li>
-              <li>Twitch API</li>
-            </ul>
-          </p>
-        </AppInfo>
-      </ProjectFrame>
-      <ProjectFrame>
-        <Heading>
-          <h3>Noor Grill</h3>
-          <a
-            href="https://github.com/voldev8/noor_react"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src="./github.png" alt="github" />
-          </a>
-        </Heading>
-        <AppLink
-          to="https://www.noorgrill.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            style={{ margin: 0 }}
-            src="./noorgrill_screenshot.png"
-            alt="Noor Grill Webpage"
-          />
-          <span>View App</span>
-        </AppLink>
-        <AppInfo>
-          <h4>About</h4>
-          <p>
-            Restaurant webpage developed according to client's specifications
-          </p>
-          <h4>Tools used</h4>
-          <p>
-            <ul style={{ paddingLeft: `1rem` }}>
-              <li>React</li>
-              <li>EmailJS</li>
-            </ul>
-          </p>
-        </AppInfo>
-      </ProjectFrame>
+          </AppInfo>
+          {i !== projects.length - 1 && <hr style={{ margin: `1rem 0` }} />}
+        </ProjectFrame>
+      ))}
     </Layout>
   )
 }
@@ -221,7 +115,7 @@ const Heading = styled.div`
   }
 `
 
-const AppLink = styled(Link)`
+const AppLink = styled.a`
   display: flex;
   justify-content: center;
   align-content: center;
@@ -281,7 +175,8 @@ const AppInfo = styled.article`
     margin-left: 3%;
     text-decoration: underline;
   }
-  p {
+  p,
+  ul {
     margin: 0 auto;
     width: 90%;
     padding: 1rem;

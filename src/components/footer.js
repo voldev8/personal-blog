@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Footer = () => {
@@ -7,25 +6,25 @@ const Footer = () => {
     <FooterDiv as="footer">
       <ul>
         <StyledLink
-          to="https://www.linkedin.com/in/volkan-uyarer-8789851b8/"
+          href="https://www.linkedin.com/in/volkan-uyarer-8789851b8/"
           target="_blank"
         >
           <img src="../../linkedin.png" alt="linkedin" />
         </StyledLink>
-        <StyledLink to="https://github.com/voldev8" target="_blank">
+        <StyledLink href="https://github.com/voldev8" target="_blank">
           <img src="../../github.png" alt="github" />
         </StyledLink>
-        <StyledLink to="https://www.hackerrank.com/Voldev" target="_blank">
+        <StyledLink href="https://www.hackerrank.com/Voldev" target="_blank">
           <img src="../../hackerrank.png" alt="hackerrank" />
         </StyledLink>
         <StyledLink
-          to="https://www.codecademy.com/profiles/voldev"
+          href="https://www.codecademy.com/profiles/voldev"
           target="_blank"
           style={{ border: `1px solid navy` }}
         >
           <img src="../../codec.png" alt="codecademy" />
         </StyledLink>
-        <StyledLink to="https://www.freecodecamp.org/voldev" target="_blank">
+        <StyledLink href="https://www.freecodecamp.org/voldev" target="_blank">
           <img
             style={{ padding: `6px` }}
             src="../../fcc.png"
@@ -70,7 +69,7 @@ const FooterDiv = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   margin: 1rem;
   display: flex;
   align-items: center;

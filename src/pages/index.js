@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const IndexPage = props => {
   return (
     <Layout location={props.location}>
-      <SEO
+      <Seo
         title="Home"
         keywords={[`blog`, `developer`, `javascript`, `react`, `python`]}
       />

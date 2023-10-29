@@ -117,7 +117,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Ubuntu`],
+        fonts: [`Ubuntu`, `Gloria Hallelujah`],
       },
     },
     {

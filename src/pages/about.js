@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import styled from "styled-components"
 
 const About = () => {
   return (
     <Layout title={"About"}>
-      <SEO
+      <Seo
         title="About me"
         keywords={[`blog`, `about`, `javascript`, `react`]}
       />

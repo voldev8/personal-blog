@@ -1,266 +1,91 @@
 ---
-title: Cheat-> SQL
-date: "2015-05-11"
-description: "Basics"
+title: Cheat-> NumPy
+date: "2015-06-10"
+description: "Basics (working with numerical data)"
 ---
 
 ## Table of Contents
 
 - [Basics](#basics)
-  - [Manupilation](#manipulation)
-  - [Queries](#queries)
-  - [Aggregate Functions](#aggregate-functions)
-  - [Multiple Tables](#multiple-tables)
+  - [Creating Arrays](#creating-arrays)
+  - [Array Attributes](#array-attributes)
+  - [Array Operations](#array-operations)
+  - [Array Indexing and Slicing](#array-indexing-and-slicing)
+  - [Array Reshaping and Resizing](#array-reshaping-and-resizing)
+  - [Array Functions](#array-functions)
 
 ## Basics
 
-### Manipulation
+```python
+import numpy as np
+```
 
-```sql
+### Creating Arrays
 
--- Create Table
-CREATE TABLE student (
-  id INTEGER PRIMARY KEY,
-  name TEXT UNIQUE,
-  grade INTEGER NOT NULL,
-  age INTEGER DEFAULT 10
-);
-
--- Delete Table
-DROP TABLE student;
-
--- Insert into columns in order
-INSERT INTO table_name
-VALUES (value1, value2);
-
--- Insert into columns by name
-INSERT INTO table_name (column1, column2)
-VALUES (value1, value2);
-
--- Alter Table
-ALTER TABLE table_name
-ADD column_name datatype;
-
--- Delete Statement
-DELETE FROM table_name
-WHERE some_column = some_value;
-
--- Update Statement
-UPDATE table_name
-SET column1 = value1, column2 = value2
-WHERE some_column = some_value;
-
--- Remove all data in a table
-TRUNCATE TABLE student
+```python
+arr = np.array([1, 2, 3, 4, 5])              # Create a 1D array
+matrix = np.array([[1, 2, 3], [4, 5, 6]])     # Create a 2D array
 
 ```
 
-### Queries
+### Array Attributes
 
-```sql
-
--- SELECT Statement
-SELECT *
-FROM movies;
-
--- DISTINCT Clause
-SELECT DISTINCT city
-FROM contact_details;
-
--- AND Operator
-SELECT model
-FROM cars
-WHERE color = 'blue'
-  AND year > 2014;
-
--- AS Clause
-SELECT name AS 'movie_title'
-FROM movies;
-
--- OR Operator
-SELECT name
-FROM customers
-WHERE state = 'CA'
-   OR state = 'NY';
-
--- % Wildcard
-SELECT name
-FROM movies
-WHERE name LIKE 'The%';
-
--- _ Wildcard
-SELECT name
-FROM movies
-WHERE name LIKE '_ove';
-
--- ORDER BY Clause
-SELECT *
-FROM contacts
-ORDER BY birth_date DESC;
-
--- LIKE Operator
-SELECT name
-FROM movies
-WHERE name LIKE 'Star%';
-
--- BETWEEN Operator
-SELECT *
-FROM movies
-WHERE year BETWEEN 1980 AND 1990;
-
--- LIMIT Clause
-
-SELECT *
-FROM movies
-LIMIT 5;
-
--- NULL Values
-
-SELECT address
-FROM records
-WHERE address IS NOT NULL;
-
--- WHERE Clause
-SELECT title
-FROM library
-WHERE pub_year = 2017;
+```python
+arr.shape       # Shape of the array
+len(arr)        # Length of the array
+arr.ndim        # Number of array dimensions
+arr.size        # Number of elements in the array
+arr.dtype       # Data type of the array
 
 ```
 
-### Aggregate Functions
+### Array Operations
 
-```sql
-
--- Column References
-SELECT COUNT(*) AS 'total_movies',
-   rating
-FROM movies
-GROUP BY 2
-ORDER BY 1;
-
--- SUM() Aggregate Function
-SELECT SUM(salary)
-FROM salary_disbursement;
-
--- MAX() Aggregate Function
-SELECT MAX(amount)
-FROM transactions;
-
--- COUNT() Aggregate Function
-SELECT COUNT(*)
-FROM employees
-WHERE experience < 5;
-
--- MIN() Aggregate Function
-SELECT MIN(amount)
-FROM transactions;
-
--- AVG() Aggregate Function
-SELECT AVG(salary)
-FROM employees
-WHERE experience < 5;
-
--- ROUND() Function
-SELECT year,
-   ROUND(AVG(rating), 2)
-FROM movies
-WHERE year = 2015;
-
--- GROUP BY Clause
-SELECT rating,
-   COUNT(*)
-FROM movies
-GROUP BY rating;
-
--- HAVING Clause
-SELECT year,
-   COUNT(*)
-FROM movies
-GROUP BY year
-HAVING COUNT(*) > 5;
+```python
+arr2 = np.array([6, 7, 8, 9, 10])
+arr + arr2                       # addition
+arr - arr2                       # subtraction
+arr * arr2                       # multiplication
+arr / arr2                       # division
+np.dot(arr, arr2)                # Dot product
 
 ```
 
-### Multiple Tables
+### Array Indexing and Slicing
 
-##### Outer Join
+```python
+arr[0]           # Access an element
+arr[2:5]         # Slice elements from index 2 to 4 (exclusive)
+matrix[0, 2]     # Access a specific element in a matrix
+matrix[:, 1]     # Access all elements in the second column
+arr[arr > 3]     # Filter elements based on a condition
 
-An outer join will combine rows from different tables even
-if the join condition is not met.
-In a LEFT JOIN, every row in the left table is returned in
-the result set, and if the join condition is not met, then
-NULL values are used to fill in the columns from the right table.
 
-```sql
-SELECT column_name(s)
-FROM table1
-LEFT JOIN table2
-  ON table1.column_name = table2.column_name;
 ```
 
-##### WITH CLAUSE
+### Array Reshaping and Resizing
 
-The WITH clause stores the result of a query in a temporary table
-(temporary_movies) using an alias.
-Multiple temporary tables can be defined with one instance of the WITH keyword.
+```python
+arr.reshape((3, 2))        # Reshape the array
+np.resize(arr, (3, 2))     # Resize the array (repeating or truncating values)
 
-```sql
-WITH temporary_movies AS (
-SELECT _
-FROM movies
-)
-SELECT _
-FROM temporary_movies
-WHERE year BETWEEN 2000 AND 2020;
 ```
 
-##### UNION Clause
+### Array Functions
 
-The UNION clause is used to combine results that appear from multiple
-SELECT statements and filter duplicates.
+```python
+np.zeros((2, 3))        # Create an array filled with zeros
+np.ones((2, 3))         # Create an array filled with ones
+np.arange(0, 10, 2)     # Create an array with a range of values
+np.linspace(0, 1, 5)    # Create an array with evenly spaced values
+np.random.rand(3, 2)    # Create an array with random values
+np.max(arr)             # Find the maximum value in the array
+np.min(arr)             # Find the minimum value in the array
+np.sum(arr)             # Calculate the sum of all elements
+np.mean(arr)            # Calculate the mean of all elements
+np.median(arr)          # Calculate the median of all elements
+np.std(arr)             # Calculate the standard deviation
+np.sort(arr)            # Sort the array in ascending order
+np.argsort(arr)         # Get the indices that would sort the array
 
-For example, given a first_names table with a column name containing rows
-of data “James” and “Hermione”, and a last_names table with a column name
-containing rows of data “James”, “Hermione” and “Cassidy”, the result of
-this query would contain three names: “Cassidy”, “James”, and “Hermione”.
-
-```sql
-SELECT name
-FROM first_names
-UNION
-SELECT name
-FROM last_names
-```
-
-##### CROSS JOIN Clause
-
-The CROSS JOIN clause is used to combine each row from one table with each
-row from another in the result set. This JOIN is helpful for creating all
-possible combinations for the records (rows) in two tables.
-
-The given query will select the shirt_color and pants_color columns from the
-result set, which will contain all combinations of combining the rows in the
-shirts and pants tables. If there are 3 different shirt colors in the shirts
-table and 5 different pants colors in the pants table then the result set will
-contain 3 x 5 = 15 rows
-
-```sql
-SELECT shirts.shirt_color,
-pants.pants_color
-FROM shirts
-CROSS JOIN pants;
-```
-
-##### Inner Join
-
-The JOIN clause allows for the return of results from more than one table by
-joining them together with other results based on common column values specified
-using an ON clause. INNER JOIN is the default JOIN and it will only return results
-matching the condition specified by ON.
-
-```sql
-SELECT *
-FROM books
-JOIN authors
-ON books.author_id = authors.id;
 ```

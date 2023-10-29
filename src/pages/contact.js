@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Button from "../components/button"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 import Particle from "../components/particle"
@@ -10,7 +10,7 @@ import Particle from "../components/particle"
 const Contact = () => {
   return (
     <Layout title={"Contact Form"}>
-      <SEO
+      <Seo
         title="Contact"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
