@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import projects from "/static/projects.json"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Projects = () => {
   return (
@@ -20,7 +19,7 @@ const Projects = () => {
             <h3>{project.title}</h3>
             {project.github_link.map((link, i) => (
               <a href={link[0]} target="_blank" rel="noreferrer" key={i}>
-                <StaticImage src="../images/github.png" alt="github" />
+                <img src="/github.png" alt="github" />
                 <ToolTip>{link[1] ? link[1] : "Github Link"}</ToolTip>
               </a>
             ))}
@@ -35,14 +34,12 @@ const Projects = () => {
           </AppLink>
           <AppInfo>
             <h4>About</h4>
-            {/* <p> */}
             {project.app_description.map((para, i) => (
               <p key={i}>
                 {para}
                 <br />
               </p>
             ))}
-            {/* </p> */}
             <h4>Tools used</h4>
             <ul>
               {project.tools.map((tool, i) => (
