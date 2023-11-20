@@ -2,7 +2,7 @@
   "name": "personal-blog",
   "private": true,
   "description": "A technical blog",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "Volkan Uyarer",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
