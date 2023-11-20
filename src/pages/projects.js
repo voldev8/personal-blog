@@ -1,8 +1,11 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import projects from "../utils/projects.json"
+
+import projects from "/static/projects.json"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Projects = () => {
   return (
@@ -17,7 +20,7 @@ const Projects = () => {
             <h3>{project.title}</h3>
             {project.github_link.map((link, i) => (
               <a href={link[0]} target="_blank" rel="noreferrer" key={i}>
-                <img src="./github.png" alt="github" />
+                <StaticImage src="../images/github.png" alt="github" />
                 <ToolTip>{link[1] ? link[1] : "Github Link"}</ToolTip>
               </a>
             ))}
@@ -32,14 +35,14 @@ const Projects = () => {
           </AppLink>
           <AppInfo>
             <h4>About</h4>
-            <p>
-              {project.app_description.map((para, i) => (
-                <>
-                  {para}
-                  <br />
-                </>
-              ))}
-            </p>
+            {/* <p> */}
+            {project.app_description.map((para, i) => (
+              <p key={i}>
+                {para}
+                <br />
+              </p>
+            ))}
+            {/* </p> */}
             <h4>Tools used</h4>
             <ul>
               {project.tools.map((tool, i) => (
@@ -111,7 +114,7 @@ const Heading = styled.div`
   }
   img {
     height: 2rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 `
 
@@ -178,8 +181,8 @@ const AppInfo = styled.article`
   p,
   ul {
     margin: 0 auto;
-    width: 90%;
     padding: 1rem;
+    width: 90%;
     background-color: rgba(128, 0, 128, 0.05);
   }
 `

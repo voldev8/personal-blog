@@ -13,7 +13,7 @@ description: "Basics"
   - [Views and URLs](#views-and-urls)
   - [Templates](#templates)
   - [Static Files](#static-files)
-  - [Forms](#froms)
+  - [Forms](#forms)
   - [Authentication](#authentication)
   - [Admin Panel](#admin-panel)
   - [Middleware](#middleware)

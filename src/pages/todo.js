@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
-import todoList from "../utils/todo.json"
+import todoList from "/static/todo.json"
 
 const Todo = () => {
   return (

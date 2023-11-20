@@ -12,7 +12,7 @@ description: "Basics, How js works, DOM, Objects and functions "
   - [Comment](#comment)
   - [Variables](#variables)
   - [Operators](#operators)
-  - [If/else Statements](#if/else-statements)
+  - [If/else Statements](#if-else-statements)
   - [Ternary Operator](#ternary-operator)
   - [Switch Statement](#switch-statement)
   - [Functions](#functions)
@@ -46,7 +46,7 @@ description: "Basics, How js works, DOM, Objects and functions "
 
 ```javascript
 //Javascript hello world
-;(function() {
+;(function () {
   "use strict"
   function greetMe(name) {
     console.log("Hello " + name + ".")
@@ -91,7 +91,7 @@ var isFullAge = now - yearJohn >= fullAge
 console.log(isFullAge) //true
 ```
 
-### If/else Statements
+### If-else Statements
 
 ```javascript
 var ifElse = true
@@ -153,7 +153,7 @@ yearsUntilRetire(1990, "John")
 
 //FUNCTION STATEMENTS and EXPRESSIONS
 //function expression (they do not hoist)
-var whichTeam = function(team, name) {
+var whichTeam = function (team, name) {
   switch (team) {
     case "Barcelona":
       return name + " plays for Barca."
@@ -206,7 +206,7 @@ var hank = {
   firstName: "Hank",
   lastName: "Dang",
   birthYear: 1980,
-  calcAge: function() {
+  calcAge: function () {
     this.age = 2018 - this.birthYear
   },
 }
@@ -259,7 +259,7 @@ function calculateAge(year) {
 //Expression
 //hoisting doesn't work with expressions
 retirement(1980) //Uncaught TypeError: retirement is not a function
-var retirement = function(year) {
+var retirement = function (year) {
   console.log(65 - (2018 - year))
 }
 
@@ -322,7 +322,7 @@ function carAge(year) {
 var damon = {
   name: "Damon",
   yearOfStart: 2003,
-  yearsOfWork: function() {
+  yearsOfWork: function () {
     //method
     console.log(this) //damon object
     console.log(2018 - this.yearOfStart)
@@ -350,7 +350,7 @@ mike.yearsOfWork()
 eventTarget.addEventListener("event", eventHandlerFunction)
 eventTarget.removeEventListener("event", eventHandlerFunction)
 
-document.querySelector(".class").addEventListener("click", function() {
+document.querySelector(".class").addEventListener("click", function () {
   document.getElementById("dice1").style.display = "block"
   document.getElementById("dice1").src = "dice-" + dice1 + ".png"
   document.querySelector(".player-0-panel").classList.remove("active")
@@ -365,7 +365,7 @@ document.querySelector(".class").addEventListener("click", function() {
 ### Function Constructor
 
 ```javascript
-var Person = function(name, yearOfBirth, job) {
+var Person = function (name, yearOfBirth, job) {
   this.name = name
   this.yearOfBirth = yearOfBirth
   this.job = job
@@ -375,7 +375,7 @@ var Person = function(name, yearOfBirth, job) {
 ### Inheritance
 
 ```javascript
-Person.prototype.calculateAge = function() {
+Person.prototype.calculateAge = function () {
   console.log(2018 - this.yearOfBirth)
 }
 Person.prototype.lastName = "Smith"
@@ -390,7 +390,7 @@ console.log(damon.lastName + " " + henry.lastName) //Smith Smith
 
 ```javascript
 var personProto = {
-  calculateAge1: function() {
+  calculateAge1: function () {
     console.log(2018 - this.yearOfBirth) //27
   },
 }
@@ -463,15 +463,15 @@ console.log(heartBeat) // [175, 168, -1, -1]
 ```javascript
 function interviewQuestions(job) {
   if (job === "designer") {
-    return function(name) {
+    return function (name) {
       console.log(name + ", can you please explain what UX design is?")
     }
   } else if (job === "teacher") {
-    return function(name) {
+    return function (name) {
       console.log("What subject do you teach, " + name + "!")
     }
   } else {
-    return function(name) {
+    return function (name) {
       console.log("What do you do " + name + "?")
     }
   }
@@ -489,7 +489,7 @@ interviewQuestions("teacher")("John") //What subject do you teach, John!
 ```javascript
 // Immediately Invoked Function Expressions
 var x = 2
-;(function(x) {
+;(function (x) {
   var score = Math.random() * 10
   console.log(score) //4.122908056875344
   console.log(x) // 2
@@ -503,7 +503,7 @@ var x = 3
 ```javascript
 function retirement(retirementAge) {
   var a = " years left until retirement"
-  return function(yearOfBirth) {
+  return function (yearOfBirth) {
     var age = 2018 - yearOfBirth
     console.log(retirementAge - age + a)
   }
@@ -518,7 +518,7 @@ retirementIceland(1990) //39 years left until retirement
 retirement(1990)(65) //37 years left until retirement
 
 function interviewQuestions(job) {
-  return function(name) {
+  return function (name) {
     if (job === "designer") {
       console.log(name + ", can you please explain what UX design is?")
     } else if (job === "teacher") {
@@ -538,7 +538,7 @@ var bca = {
   name: "Damon",
   age: 23,
   job: "Driver",
-  presentation: function(style, timeOfDay) {
+  presentation: function (style, timeOfDay) {
     if (style === "formal") {
       console.log(
         "Good " +

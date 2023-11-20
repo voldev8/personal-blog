@@ -7,6 +7,8 @@ import Seo from "../components/seo"
 import Button from "../components/button"
 import styled from "styled-components"
 
+import "prismjs/themes/prism-tomorrow.css"
+
 const BlogPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -45,7 +47,6 @@ const BlogPage = ({ data, location }) => {
                   {title}
                 </Link>
               </BlogHeader>
-              {/* <small>{post.frontmatter.date}</small> */}
               <p
                 style={{ paddingLeft: `1rem` }}
                 dangerouslySetInnerHTML={{
@@ -89,7 +90,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         excerpt
         fields {

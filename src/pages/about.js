@@ -1,7 +1,10 @@
 import React from "react"
+import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import styled from "styled-components"
+import Skills from "../components/skills"
 
 const About = () => {
   return (
@@ -10,6 +13,9 @@ const About = () => {
         title="About me"
         keywords={[`blog`, `about`, `javascript`, `react`]}
       />
+      <StyledImage>
+        <StaticImage src="../images/about_me.jpg" alt="My Image" />
+      </StyledImage>
       <AboutPar>
         Hi there! Thank you for stopping by. This is Volkan, I am a self-taught
         web developer. My journey began when I printed out the words 'Hello
@@ -25,9 +31,15 @@ const About = () => {
         laughing with my wife, hiking mountains with beautiful views, playing
         video games with friends, or mountain biking.
       </AboutPar>
+      <Skills />
     </Layout>
   )
 }
+
+const StyledImage = styled.div`
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px #2f3676;
+`
 
 const AboutPar = styled.p`
   fontfamily: Ubuntu;

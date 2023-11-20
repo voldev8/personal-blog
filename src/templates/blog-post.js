@@ -1,20 +1,16 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ScrollButton from "../components/scrollButton"
-import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
-
-deckDeckGoHighlightElement()
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
-  const siteTitle = site.siteMetadata?.title || `Title`
-
   return (
     <Layout location={location}>
       <Seo
@@ -22,9 +18,9 @@ const BlogPostTemplate = ({
         description={post.frontmatter.description || post.excerpt}
       />
 
-      <h1>{post.frontmatter.title}</h1>
+      <Heading>{post.frontmatter.title}</Heading>
 
-      <section
+      <StyledSection
         dangerouslySetInnerHTML={{ __html: post.html }}
         itemProp="articleBody"
       />
@@ -42,7 +38,7 @@ const BlogPostTemplate = ({
           flexWrap: `wrap`,
           justifyContent: `space-between`,
           listStyle: `none`,
-          padding: 0,
+          padding: `1rem`,
           marginTop: `1rem`,
         }}
       >
@@ -70,6 +66,56 @@ const BlogPostTemplate = ({
     </Layout>
   )
 }
+
+const Heading = styled.h1`
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+`
+
+const StyledSection = styled.section`
+  #table-of-contents {
+    @media (max-width: 600px) {
+      font-size: 1rem;
+      margin-top: 1.4rem;
+    }
+  }
+  ul {
+    color: red;
+    padding-left: 1.5rem;
+    @media (max-width: 600px) {
+      padding-left: 0.5rem;
+    }
+  }
+  ul li p {
+    @media (max-width: 600px) {
+      display: inline;
+    }
+  }
+  ul ul {
+    padding-left: 0;
+    @media (max-width: 600px) {
+      font-size: 0.8rem;
+    }
+  }
+  h2:not(#table-of-contents) {
+    @media (max-width: 600px) {
+      font-size: 1.4rem;
+    }
+  }
+  h3 {
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+  .gatsby-highlight {
+    box-shadow: 2px 2px 8px #744c9e;
+    max-width: 88vw;
+    @media (max-width: 600px) {
+      font-size: 0.8rem;
+    }
+  }
+`
 
 export default BlogPostTemplate
 

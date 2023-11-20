@@ -23,8 +23,7 @@ const Layout = props => {
       <Navbar />
       <div
         style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
+          alignSelf: `center`,
           maxWidth: `44rem`,
           padding: `1.5rem`,
         }}
@@ -60,6 +59,9 @@ const Wrapper = styled.div`
     opacity: 0;
     animation: ${slideIn} ease 1s forwards;
     -webkit-animation: ${slideIn} ease 1s forwards;
+    @media (max-width: 600px) {
+      margin-top: 4.9rem;
+    }
   }
 `
 

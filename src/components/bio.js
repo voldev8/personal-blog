@@ -26,7 +26,7 @@ const Bio = () => {
         <StaticImage
           layout="fixed"
           formats={["auto", "webp", "avif"]}
-          src="../images/profile-pic.png"
+          src="../images/voldev_icon.png"
           width={50}
           height={50}
           quality={95}
@@ -53,7 +53,7 @@ const Container = styled.div`
 const BioImage = styled.image`
   margin: 0.5rem;
   border-radius: 50%;
-  overflow: hidden;
+  box-shadow: 1px 1px 2px #744c9e;
 `
 
 export default Bio

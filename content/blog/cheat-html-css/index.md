@@ -39,8 +39,8 @@ description: "This is where everything starts"
 - [Typography](#typography)
 - [Responsive Design](#responsive-design)
 - [Animation](#animation)
-- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox</a><sup><sup><sup>🔗</sup></sup></sup>
+- <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">Grid</a><sup><sup><sup>🔗</sup></sup></sup>
 
 ## Basic page
 
@@ -523,11 +523,11 @@ description: "This is where everything starts"
 <form action="/action_page.php">
   <input list="browsers" />
   <datalist id="browsers">
-    <option value="Internet Explorer"> </option>
-    <option value="Firefox"> </option>
-    <option value="Chrome"> </option>
-    <option value="Opera"> </option>
-    <option value="Safari"> </option>
+    <option value="Internet Explorer"></option>
+    <option value="Firefox"></option>
+    <option value="Chrome"></option>
+    <option value="Opera"></option>
+    <option value="Safari"></option>
   </datalist>
 </form>
 ```
@@ -557,9 +557,7 @@ description: "This is where everything starts"
 <main>
   <article>
     <h2>Article heading</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <hr />
 
     <h3>subsection</h3>
@@ -568,16 +566,12 @@ description: "This is where everything starts"
       <!-- linebreaks -->
       Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
     </p>
-    <p>
-      Pelientesque auctor nisi id magna consequat sagittis.
-    </p>
+    <p>Pelientesque auctor nisi id magna consequat sagittis.</p>
     <hr />
     <!-- horizontal rules -->
 
     <h3>Another subsection</h3>
-    <p>
-      Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus.
-    </p>
+    <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus.</p>
     <p>
       Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique
       vitae sagittis vel odio.

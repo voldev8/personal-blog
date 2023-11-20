@@ -6,7 +6,7 @@
       ["https://github.com/voldev8/recipes-client", "Frontend"]
     ],
     "app_link": "https://flavorites.herokuapp.com/",
-    "app_img": "./flavorites_screenshot.png",
+    "app_img": "../flavorites_screenshot.png",
     "app_img_alt": "Flavorites App",
     "app_description": [
       "The Flavorites App is a delightful platform that allows users to explore a catalog of recipes shared by fellow culinary enthusiasts. With a user-friendly interface, users can effortlessly search for recipes by name or tags, making it a breeze to find the perfect dish for any occasion.",
@@ -20,7 +20,7 @@
     "title": "CS:GO tube App",
     "github_link": [["https://github.com/voldev8/cstube"]],
     "app_link": "https://cstube.herokuapp.com/",
-    "app_img": "./csgotube_screenshot.png",
+    "app_img": "../csgotube_screenshot.png",
     "app_img_alt": "CS:GO_tube App",
     "app_description": [
       "The idea for this app was to consolidate CS:GO nade videos into a database. In this database, videos are organized by map, specific locations within each map and the type of utility demonstrated.",
@@ -33,7 +33,7 @@
     "title": "Noor Grill",
     "github_link": [["https://github.com/voldev8/noor_react"]],
     "app_link": "https://www.noorgrill.com/",
-    "app_img": "./noorgrill_screenshot.png",
+    "app_img": "../noorgrill_screenshot.png",
     "app_img_alt": "Noor Grill Webpage",
     "app_description": [
       "Restaurant webpage developed according to client's specifications Responsive design, dynamic menu display"
@@ -44,7 +44,7 @@
     "title": "Currently working on",
     "github_link": [["https://github.com/voldev8/jobHunt"]],
     "app_link": "/todo",
-    "app_img": "./dwight.jpeg",
+    "app_img": "../dwight.jpeg",
     "app_img_alt": "dwight the office meme",
     "app_description": [
       "The app that help users to explore, save, and apply for their favorite job opportunities with ease"
